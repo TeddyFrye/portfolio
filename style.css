@@ -24,27 +24,55 @@ body {
 }
 
 header {
-    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    overflow: hidden;
+    position: relative;
 }
 .profile-container {
     position: relative;
-    display: inline-block; /* Or use 'block' depending on your layout */
+    display: inline-block; 
+    z-index: 0;
+    width: 100%;
+    margin: auto;
+    padding: 10px;  
+}
+
+.profile-background {
+    background-color: #0891b2; /* Blue background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Must be wide enough to cover the area after rotation */
+    height: 100%s; /* Must be tall enough to cover the area after rotation */
+    transform: rotate(-30deg); /* Rotate div */
+    z-index: -1; /* Make sure it stays behind the text */
+}
+
+.profile-image {
+    width: 85%; 
+    height: 50%;
+    display: block;
+    position: relative; 
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    z-index: 1;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .name-overlay {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     text-shadow: 1px 1px 1px #222222;
     position: absolute;
-    top: 70%; /* Adjust as necessary */
+    top: 70%;
     left: 10%;
     width: 50%;
-    text-align: center;
+    text-align: left;
     color: white; /* Or any color you want */
     font-size: 4em; /* Adjust as necessary */
     transform: translateY(-50%); /* Centers the text vertically */
+    z-index: 2; /* Make sure it's on top */
 }
 
 
@@ -99,6 +127,34 @@ img {
 
 @media (max-width: 768px) {
     /* Styles for screens smaller than 768px */
+    .header {
+        padding: 1em 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile-background {
+        width: 250%;
+        height: 75%;
+        top: -10%;
+        left:  -110%;
+        transform: rotate(-35deg);
+    }
+
+
+    .profile-image {
+        top: 10;
+        width: 75%;
+        height: 50%;
+    }
+
+    .name-overlay {
+        font-size: 3em;
+        bottom:-5%;
+        left: 15%;
+    }
 }
 
 @media (min-width: 769px) {
