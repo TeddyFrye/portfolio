@@ -189,12 +189,12 @@ img {
         font-family: Roboto, sans-serif;
         text-shadow: 1px 1px 1px #222222;
         position: absolute;
-        top: 60%;
+        top: 65%;
         left: 15%;
         width: 50%;
         text-align: left;
         color: white; /* Or any color you want */
-        font-size: 3em; /* Adjust as necessary */
+        font-size: 1.8em; /* Adjust as necessary */
         transform: translateY(-50%); 
     }
 
@@ -205,14 +205,26 @@ img {
         top: 0px;
         z-index: -1;
         padding: 2em 1em;
-        margin: 1em;
-        height: 100%;
+        margin-right: -25px;
+        width: 100%;
         font-size: 1.5em;
-        text-align: right;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .about-me > h2 {
         text-align: center;
+     
+    }
+
+    .about-me > p {
+        margin: 0;
+        color: rgb(136, 136, 136);
+        font-size: 1em;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .social-links {
