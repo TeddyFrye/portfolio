@@ -151,10 +151,8 @@ img {
     }
 
     .name-overlay {
-        font-size: relative;
-        max-width: 10%;
-        max-height: 5%;
-        bottom:-5%;
+        font-size: 1.5em;
+        bottom:-15%;
         left: 15%;
     }
 }
