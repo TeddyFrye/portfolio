@@ -243,17 +243,21 @@ img {
     }
 
     .project-container {
+       /* Single column */
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        padding: 10px;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        max-width: none;
     }
 
     .project {
-        width: 80%;
-        margin-bottom: 20px;
-    }
+        width: 100% !important;
+  }
+
 }
 
 /* Media query for desktops, colored green */
@@ -379,60 +383,84 @@ img {
         text-align: center;
     }
     
-    .contact-links {
-        /* Style your contact links here */
-    }
-    
     /* Responsive Images */
     img {
         max-width: 85%;
         height: 50%;
-    }}
+    }
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .project {
+        width: calc(50% -20px);
+        margin-bottom: 20px;
+    }
+}
 
 /* Projects */
 .project-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: space-between; /* Spreads the items evenly */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+    max-width: 1200px; /* Adjust the maximum width of the container */
+    margin: auto; /* Centers the container on the page */
+    padding: 10px;
+}
 
 .project {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        height: 300px;
-        width: 300px;
-    }
+    width: calc(33.333% - 20px);
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    margin-bottom: 20px; /* Space between projects */
+    background-color: white;
+    border-radius: 2px; 
+    text-align: center;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%; /* Ensure images take up the full width of .project */
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: stretch;
+    margin: 0 auto;
+}
+
+.project-info {
+    padding: 10px;
+}
+
+.project-title {
+    margin: 0; /* Removes default margin */
+    padding: 10px 0; /* Adds some spacing above and below the title */
+    text-align: center; /* Center-align the title */
+}
 
 .project-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-    
+    display: flex;
+    justify-content: center; /* Centers the links */
+    padding: 10px 0; /* Adds some spacing above and below the links */
+}
+
 .project-link {
-        display: flex;
-        flex-direction: row;
-        width: 50%;
-    }
+    margin: 0 10px; /* Adds horizontal spacing between links */
+}
 
 .project-link img {
-        width: 40%;
-        height: 40%;
-        margin: 0 0px;
-        padding: 10px;
-        background-color:rgb(166, 166, 166);
-        border-radius: 50%;
-    }
-
-.project-link:hover img{
-        transform: scale(1.1);
-        background-color: rgb(89, 88, 88);;
-        border-radius: 50%;
-    }
+    width: 30px; /* Adjust the size of icons */
+    height: 30px;
+    vertical-align: middle; /* Aligns image correctly with text if any */
+}
