@@ -9,6 +9,13 @@
     src: url(public/Montserrat-Regular.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+
 div {
     font-family: Montserrat-Regular;
     font-size: 40px;
@@ -42,7 +49,7 @@ header {
 }
 
 .profile-background {
-    background-color: #b20808; 
+    background-color: #0891b2; 
     position: absolute;
     width: 250%;
     height: 75%;
@@ -159,7 +166,7 @@ img {
     height: 50%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     /* Styles for screens smaller than 768px */
     .header {
         padding: 1em;
@@ -204,8 +211,8 @@ img {
         position: absolute;
         top: -275px;
         z-index: -1;
-        padding: 2em 1em;
-        margin-right: -25px;
+        padding: 20px 10px;
+        margin-right: -15px;
         width: 100%;
         font-size: 1.5em;
         text-align: center;
@@ -223,8 +230,8 @@ img {
         color: rgb(136, 136, 136);
         font-size: 1em;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        margin: 10px;
+        padding: 10px;
     }
 
     .social-links {
@@ -257,7 +264,11 @@ img {
     .project {
         width: 100% !important;
   }
+    .project-title {
+        font-size: 1em !important;
+    }
 
+  
 }
 
 /* Media query for desktops, colored green */
@@ -281,7 +292,7 @@ img {
     }
     
     .profile-background {
-        background-color: #08b22a; 
+        background-color:#0891b2; 
         position: absolute;
         width: 250%;
         height: 75%;
@@ -314,7 +325,7 @@ img {
     }
     
     #about-me {
-        background-color: #f09494;
+        background-color: #a2a2a2;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
         /*MOVE ABOUT me section up behind header*/
         position: relative;
@@ -415,6 +426,7 @@ img {
 
 .project {
     width: calc(33.333% - 20px);
+    height: 360px;
     padding: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     margin-bottom: 20px; /* Space between projects */
@@ -426,6 +438,7 @@ img {
 
 .project-image {
     width: 100%; /* Ensure images take up the full width of .project */
+    height: 225px;
     display: block;
     padding: 0px;
     margin: 0px;
@@ -444,15 +457,18 @@ img {
 }
 
 .project-title {
-    margin: 0; /* Removes default margin */
+    margin-top: 15px; /* Removes default margin */
+    margin-bottom: 0;
     padding: 10px 0; /* Adds some spacing above and below the title */
-    text-align: center; /* Center-align the title */
+    text-align: center; /* Center-align the title */   
+    font-size: 0.75em; /* Adjust the font size */
+    font-size-adjust:inherit;
 }
 
 .project-links {
     display: flex;
     justify-content: center; /* Centers the links */
-    padding: 10px 0; /* Adds some spacing above and below the links */
+    padding-bottom: 5px; /* Adds some spacing above and below the links */
 }
 
 .project-link {
@@ -463,4 +479,142 @@ img {
     width: 30px; /* Adjust the size of icons */
     height: 30px;
     vertical-align: middle; /* Aligns image correctly with text if any */
+}
+
+/* Footer Styling */
+
+
+footer#contact-me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0891b2;
+    color: #fefefe;
+    text-align: left;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%; /* Left side takes up half the width */
+}
+
+footer#contact-me h2 {
+    margin-top: -30px;
+    font-size: 1.5em;
+    font-weight:700;
+    padding-left: 50px;
+    padding-top: 10px
+}
+
+.contact-blurb,
+.contact-links{
+    flex: 1; /* Each child will take up equal space */
+    margin: 10px; /* Add some margin for spacing */
+    max-width: 50%;
+    font-size: .5em;
+    padding-left:30px;
+}
+
+.contact-links a,
+.contact-images a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+
+.contact-images {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+}
+
+.footer-image {
+    width: 50%; /* Image side takes up the other half of the width */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-image img {
+    width: 100%; /* Image fills its container */
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    footer#contact-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer#contact-me h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .left-side,
+    .footer-image {
+        width: 100%; /* Both sections take full width on mobile */
+    }
+
+    .footer-image img {
+        object-fit: contain; /* Adjust object-fit as necessary */
+        margin-right: 60px;
+    }
+
+
+    .contact-blurb, .contact-links, .contact-images {
+        font-size: .8em;
+        justify-content: center;
+        text-align: center;
+        margin-left: 150px;
+        padding: 10px;
+    }
+
+    .contact-links a, .contact-images a {
+        width: auto; /* Auto width for anchor tags */
+        margin: 0; /* Remove margins if necessary */
+        justify-content: center;
+    }
+
+    .contact-images {
+        justify-content: center; /* Center the social icons on mobile */
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50%; /* Left side takes up half the width */
+    }
+
+    .contact-blurb,
+    .contact-links{
+        flex: 1; /* Each child will take up equal space */
+        margin: 10px; /* Add some margin for spacing */
+        max-width: 50%;
+        font-size: .75em;
+        padding-left:30px;
+        padding-bottom: 10px;
+    }
+
+    .footer-image {
+        width: 50%; /* Image side takes up the other half of the width */
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+
 }
