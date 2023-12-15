@@ -143,11 +143,17 @@ header {
     margin-bottom: 1em;
 }
 
-.my-work {
+#my-work {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px; /* Adjust the margin as needed for spacing */
+}
+
+#my-work h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 2px;
 }
 
 .project {
@@ -562,6 +568,9 @@ footer#contact-me h2 {
     footer#contact-me {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 10px;
+        margin: 0;
     }
 
     footer#contact-me h2 {
@@ -573,12 +582,13 @@ footer#contact-me h2 {
 
     .left-side,
     .footer-image {
-        width: 100%; /* Both sections take full width on mobile */
+        width: 100% !important; 
     }
 
     .footer-image img {
         object-fit: contain; /* Adjust object-fit as necessary */
-        margin-right: 60px;
+        left: -10px !important;
+        width: 700px!important; 
     }
 
 
