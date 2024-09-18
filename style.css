@@ -12,7 +12,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+    box-sizing: border-box; 
 }
 
 
@@ -54,8 +54,8 @@ header {
     width: 250%;
     height: 75%;
     top: -10%;
-    left:  -110%;  transform: rotate(-15deg); /* Rotate the background */
-    z-index: -1; /* Make sure it stays behind the text */
+    left:  -110%;  transform: rotate(-15deg); 
+    z-index: -1; 
 }
 
 .profile-image {
@@ -78,17 +78,14 @@ header {
     right: 5%;
     width: 100%;
     text-align: right;
-    color: white; /* Or any color you want */
-    /*Make font size responsive*/
-    font-size: 3em; /* Adjust as necessary */
-    transform: translateY(-50%); /* Centers the text vertically */
-    z-index: 2; /* Make sure it's on top */
+    color: white;
+    font-size: 3em; 
+    transform: translateY(-50%); 
 }
 
 .about-me {
     background-color: #cecece;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    /*MOVE ABOUT me section up behind header*/
     position: relative;
     top: -375px;
     z-index: -1;
@@ -147,7 +144,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px; /* Adjust the margin as needed for spacing */
+    margin: 20px;
 }
 
 #my-work h2 {
@@ -157,7 +154,7 @@ header {
 }
 
 .project {
-    margin: 10px; /* Adjust the margin as needed for spacing */
+    margin: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 2px;
@@ -235,8 +232,8 @@ img {
         left: 15%;
         width: 50%;
         text-align: left;
-        color: white; /* Or any color you want */
-        font-size: 1.8em; /* Adjust as necessary */
+        color: white; 
+        font-size: 1.8em;
         transform: translateY(-50%); 
     }
 
@@ -266,18 +263,6 @@ img {
         padding: 10px;
     }
 
-    .project-container {
-       /* Single column */
-        display: flex !important;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center !important;
-        width: 100%;
-        padding: 10px !important;
-        margin: 0 auto !important;
-        max-width: none !important
-    }
-
     .project {
         width: 100% !important;
         align-items: center !important;
@@ -287,8 +272,6 @@ img {
     }
 }
 
-/* Media query for desktops, colored green */
-@media (min-width: 1024px){
     header {
         color: #fff;
         text-align: center;
@@ -313,8 +296,8 @@ img {
         width: 250%;
         height: 75%;
         top: -10%;
-        left:  -110%;  transform: rotate(-15deg); /* Rotate the background */
-        z-index: -1; /* Make sure it stays behind the text */
+        left:  -110%;  transform: rotate(-15deg); 
+        z-index: -1; 
     }
     
     .profile-image {
@@ -334,16 +317,14 @@ img {
         margin-top:  45%;
         text-align: left;
         left: -33%;
-        color: white; /* Or any color you want */
-        /*Make font size responsive*/
-        font-size: 2.5em; /* Adjust as necessary */
-        z-index: 2; /* Make sure it's on top */
+        color: white;
+        font-size: 2.5em; 
+        z-index: 2; 
     }
     
     .about-me {
         background-color: #cecece;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-        /*MOVE ABOUT me section up behind header*/
         position: relative;
         margin-top: 200px;
         padding:  10px;
@@ -429,33 +410,32 @@ img {
         width: calc(50% -20px);
         margin-bottom: 20px;
     }
-}
+
 
 /* Projects */
 .project-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    justify-content: space-between; /* Spreads the items evenly */
-    align-items: flex-start; /* Aligns items to the start of the flex container */
-    max-width: 1200px; /* Adjust the maximum width of the container */
-    margin: auto; /* Centers the container on the page */
-    padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	align-items: flex-start; 
+	max-width: 1200px; 
+	margin: 20px auto; 
+	padding: 10px;
 }
 
 .project {
-    width: calc(33.333% - 20px);
-    height: 360px;
-    padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    margin-bottom: 20px; /* Space between projects */
-    background-color: white;
-    border-radius: 2px; 
-    text-align: center;
-    overflow: hidden;
+	flex: 0 1 calc(33.333% - 20px); /* Adjust this part: ensures that each project takes about one-third of the width minus margin */
+	margin: 10px; /* Margin around each project */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	border-radius: 2px;
+	text-align: center;
+	overflow: hidden;
+	padding: 20px; /* Consistent padding inside each project */
 }
 
 .project-image {
-    width: 100%; /* Ensure images take up the full width of .project */
+    width: 100%; 
     height: 225px;
     display: block;
     padding: 0px;
@@ -475,33 +455,31 @@ img {
 }
 
 .project-title {
-    margin-top: 15px; /* Removes default margin */
+    margin-top: 15px; 
     margin-bottom: 0;
-    padding: 10px 0; /* Adds some spacing above and below the title */
-    text-align: center; /* Center-align the title */   
-    font-size: 0.75em; /* Adjust the font size */
+    padding: 10px 0; 
+    text-align: center; 
+    font-size: 0.75em; 
     font-size-adjust:inherit;
 }
 
 .project-links {
     display: flex;
-    justify-content: center; /* Centers the links */
-    padding-bottom: 5px; /* Adds some spacing above and below the links */
+    justify-content: center; 
+    padding-bottom: 5px; 
 }
 
 .project-link {
-    margin: 0 10px; /* Adds horizontal spacing between links */
+    margin: 0 10px; 
 }
 
 .project-link img {
-    width: 30px; /* Adjust the size of icons */
+    width: 30px; 
     height: 30px;
-    vertical-align: middle; /* Aligns image correctly with text if any */
+    vertical-align: middle; 
 }
 
 /* Footer Styling */
-
-
 footer#contact-me {
     display: flex;
     align-items: flex-start;
@@ -516,7 +494,7 @@ footer#contact-me {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 50%; /* Left side takes up half the width */
+    width: 50%; 
 }
 
 footer#contact-me h2 {
@@ -529,8 +507,8 @@ footer#contact-me h2 {
 
 .contact-blurb,
 .contact-links{
-    flex: 1; /* Each child will take up equal space */
-    margin: 10px; /* Add some margin for spacing */
+    flex: 1; 
+    margin: 10px; 
     max-width: 50%;
     font-size: .5em;
     padding-left:30px;
@@ -549,17 +527,17 @@ footer#contact-me h2 {
     flex-direction: row; 
     justify-content: flex-start; 
     align-items: center;
-    gap: 10px; /* Adjust gap as needed */
+    gap: 10px; 
 }
 
 .footer-image {
-    width: 50%; /* Image side takes up the other half of the width */
+    width: 50%; 
     display: flex;
     justify-content: flex-end;
 }
 
 .footer-image img {
-    width: 100%; /* Image fills its container */
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -586,7 +564,7 @@ footer#contact-me h2 {
     }
 
     .footer-image img {
-        object-fit: contain; /* Adjust object-fit as necessary */
+        object-fit: contain;
         left: -10px !important;
         width: 700px!important; 
     }
@@ -601,13 +579,13 @@ footer#contact-me h2 {
     }
 
     .contact-links a, .contact-images a {
-        width: auto; /* Auto width for anchor tags */
-        margin: 0; /* Remove margins if necessary */
+        width: auto; 
+        margin: 0; 
         justify-content: center;
     }
 
     .contact-images {
-        justify-content: center; /* Center the social icons on mobile */
+        justify-content: center; 
         margin-bottom: 5px;
         margin-left: 10px;
     }
@@ -638,43 +616,4 @@ footer#contact-me h2 {
         padding: 10px;
 
     }
-}
-
-@media (min-width: 540px){
-    .project-image img{
-        height: 250px !important;
-        width: auto;
-    }
-
-    .project-info{
-        font-size: 1em;
-    }
-}
-
-@media (min-width: 900px) {
-
-    .left-side {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 50%; /* Left side takes up half the width */
-    }
-
-    .contact-blurb,
-    .contact-links{
-        flex: 1; /* Each child will take up equal space */
-        margin: 10px; /* Add some margin for spacing */
-        max-width: 50%;
-        font-size: .75em;
-        padding-left:30px;
-        padding-bottom: 10px;
-    }
-
-    .footer-image {
-        width: 50%; /* Image side takes up the other half of the width */
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 50px;
-    }
-
 }
